@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<Interval>
+    <CurrentVals>
+        <SplittingTime>Current Splitting Time Values
+            <Head>Time  Value</Head>
+            <Data>
+                <Row>t0  1.748</Row>
+                <Row>t1  1.814</Row>
+                <Row>t2  1.861</Row>
+            </Data>
+        </SplittingTime>
+    </CurrentVals>
+    <AcceptanceRates>
+        <UpdateRates>Update Rates (chain 0) -- Population Splitting Times
+            <Head>NielsenWakeley  RannalaYang  </Head>
+            <Subhead>#Tries  #Accp  %</Subhead>
+            <Data>
+                <Row>_t0  8.263e4  2.832e4  34.2786  8.275e4  2.473e4  29.8847  </Row>
+                <Row>_t1  8.272e4  4.447e4  53.7586  8.274e4  3.884e4  46.9368  </Row>
+                <Row>_t2  8.265e4  4.908e4  59.3832  8.250e4  5.868e4  71.1242  </Row>
+            </Data>
+        </UpdateRates>
+        <UpdateRates>Update Rates (chain 0) -- Genealogies
+            <Head>branch       topology     tmrca        </Head>
+            <Subhead>#Tries  #Accp  %</Subhead>
+            <Data>
+                <Row>_gtree_0  4.960e5  9.988e4  20.1369  4.960e5  1.185e4  2.38917  4.960e5  1.948e4  3.92851  </Row>
+                <Row>_gtree_1  4.960e5  1.237e5  24.9316  4.960e5  1.832e4  3.69323  4.960e5  1.066e4  2.14823  </Row>
+                <Row>_gtree_2  4.960e5  1.001e5  20.1803  4.960e5  2.952e4  5.95195  4.960e5  1.312e4  2.64603  </Row>
+                <Row>_gtree_3  4.960e5  6.513e4  13.1315  4.960e5  1.133e4  2.28513  4.960e5  9.999e3  2.01597  </Row>
+                <Row>_gtree_4  4.960e5  4.168e4  8.40341  4.960e5  5.544e3  1.11777  4.960e5  6.878e3  1.38672  </Row>
+            </Data>
+        </UpdateRates>
+        <UpdateRates>Update Rates (chain 0) -- Mutation Rate Scalars
+            <Head>scalar_update  </Head>
+            <Subhead>#Tries  #Accp  %</Subhead>
+            <Data>
+                <Row>_0u  9.937e4  1.985e4  19.974  </Row>
+                <Row>_1u  9.901e4  2.208e3  2.23015  </Row>
+                <Row>_2SW0  9.912e4  2.808e4  28.3269  </Row>
+                <Row>_3SW0  9.959e4  3.116e4  31.2903  </Row>
+                <Row>_3SW1  9.925e4  2.914e4  29.3646  </Row>
+                <Row>_4u  9.889e4  1.646e4  16.6409  </Row>
+                <Row>_4SW1  9.915e4  2.645e4  26.6757  </Row>
+            </Data>
+        </UpdateRates>
+        <UpdateRates>Update Rates (chain 0) -- HKY Model Kappa parameter
+            <Head>kappa_update  </Head>
+            <Subhead>#Tries  #Accp  %</Subhead>
+            <Data>
+                <Row>_1_Ka  9.901e4  2.208e3  2.23015  </Row>
+            </Data>
+        </UpdateRates>
+    </AcceptanceRates>
+</Interval>
