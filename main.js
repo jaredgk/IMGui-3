@@ -29,7 +29,7 @@ let imfigWindow;
 
 let helpWindow;
 
-var debug = 1;
+var debug = 0;
 var winheight = 768;
 var winwidth = 1024;
 
@@ -470,8 +470,10 @@ ipcMain.on('restart',function(e,data) {
 ipcMain.on('imfig', function(e,data) {
     var s_args = parseFigArgs(data.args); //This might be weird
     var pref = data.prefix;
-    pref += '.eps';
-    var fullpath = path.join(__dirname,pref);
+    //pref += '.eps';
+    var tag = path.join(__dirname,pref);
+    //var fullpath = path.join(__dirname,pref);
+    var epspath = tag+'.eps'
     cLog(s_args);
     var s = spawn(s_args[0],s_args[1]);
     var response_sent = 0;
@@ -492,11 +494,12 @@ ipcMain.on('imfig', function(e,data) {
     });
     s.on('close',function () {
         if(response_sent === 0 && errfl === 0) {
-            var caption_filename = data.prefix+"_caption.txt";
+            //var caption_filename = data.prefix+"_caption.txt";
+            var caption_filename = tag+"_caption.txt";
             var caption = getCaption(caption_filename);
             var j = {
                 fail: 0,
-                path: fullpath,
+                path: epspath,
                 prefix: data.prefix,
                 caption: caption
             };
@@ -513,7 +516,7 @@ ipcMain.on('imfig', function(e,data) {
         if(response_sent === 0 && errfl === 2) {
             var j = {
                 fail: 2,
-                path: fullpath
+                path: epspath
             };
             e.sender.send('imfig_response',j);
         }

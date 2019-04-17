@@ -12,7 +12,6 @@ var pwd = remote.getGlobal('sharedObj').pwd.replace(/[ ]/g,'%20');
 var homedir = remote.getGlobal('sharedObj').homedir.replace(/[ ]/g,'%20');
 var sep = remote.getGlobal('sharedObj').sep;
 
-
 //Adds error below element with erraneous value
 function addError(er,el) {
     var s = '<p class="err-add" style="color:red">'+er+'</p>';
@@ -44,7 +43,7 @@ function createCmdLine() {
         ro.prefix = cc;
     } else {
         ro.prefix = 'im_fig_file';
-        args.push('-oim_fig_file');
+        args.push('-o'+pwd+sep+'im_fig_file');
     }
     cc = $('#font-type').val();
     if(cc.length !== 0) {
@@ -133,7 +132,6 @@ function createCmdLine() {
     }
     //var mval = $('input[name="m-flag"]:checked').val();
     var mval = $('#arrowid option:selected').val();
-    console.log(mval);
     if(mval === '0') {
         args.push('-ms');
     } else if(mval === '1') {
